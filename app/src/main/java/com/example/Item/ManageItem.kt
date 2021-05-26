@@ -39,7 +39,7 @@ public class ManageItem {
                 /*
                 * Check if the user is not adding the same item twice
                 * */
-                if (elm.gtin_digit_number != item.gtin_digit_number)
+                if (elm.expiry_date != item.expiry_date)
                 {
                     elm.expiry_date = item.expiry_date
                 }
@@ -72,5 +72,21 @@ public class ManageItem {
         tmp.sortBy { it.expiry_date }
 
         return tmp
+    }
+
+    /*
+    * Sort all the item base on their expiry date
+    * */
+    fun sort_expiry_date()
+    {
+        list_of_item.sortBy { it.expiry_date }
+    }
+
+    /*
+    * Print list for debug
+    * */
+    fun print_list_of_item()
+    {
+        list_of_item.forEach { println("expiry_date : " + it.expiry_date +"  gtin_number  " + it.gtin_digit_number  ) }
     }
 }

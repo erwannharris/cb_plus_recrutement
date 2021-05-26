@@ -83,4 +83,47 @@ class ManageItemTest {
         list.add_item(Item(10, 4))
         assertEquals(list.list_of_item.size, 2)
     }
+
+
+
+    /*
+    * Check if an element already in the list has is expiry date
+    * has been modified
+    * */
+    @Test
+    fun check_if_expiry_date_is_update()
+    {
+        val list = ManageItem()
+
+        list.add_item(Item(12, 4))
+        list.add_item(Item(13, 4))
+
+        assertEquals(list.list_of_item.size, 1)
+        assertEquals(list.list_of_item[0].expiry_date, 13)
+        assertEquals(list.list_of_item[0].gtin_digit_number, 4)
+    }
+
+    /*
+    * Check if a list is sorted based on the expiry date
+    * */
+    @Test
+    fun check_if_a_list_is_sorted_based_on_expiry_date()
+    {
+        val list = ManageItem()
+
+        var j = 10
+
+        for (i in 0..10)
+        {
+            list.add_item(Item(j, i))
+            j--
+        }
+
+        list.sort_expiry_date()
+
+        for (i in 0..10)
+        {
+            assertEquals(list.list_of_item[i].expiry_date, i)
+        }
+    }
 }
