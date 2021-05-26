@@ -1,6 +1,6 @@
 package com.example.Item
 
-public class ManageItem {
+class ManageItem {
 
     val list_of_item : MutableList<Item> = mutableListOf<Item>()
 
