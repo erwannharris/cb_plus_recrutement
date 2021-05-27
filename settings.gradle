@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "cb_plus_test_app"
+rootProject.name = "cb_plus_test_technique_v3"

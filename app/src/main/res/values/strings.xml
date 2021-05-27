@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">cb_plus_test_app</string>
+    <string name="app_name">cb_plus_test_technique</string>
+    <string name="app_new">New</string>
+    <string name="app_show_expiry_date">Show expiry date</string>
+    <string name="gtin_wrong">GTIN can not be empty</string>
+    <string name="expiry_wrong">Expiry date can not be empty</string>
+    <string name="date_wrong">Wrong formatExpected format : JJ/MM/AAAA</string>
+    <string name="list_empty">Empty !!! Add a new Item</string>
 </resources>
